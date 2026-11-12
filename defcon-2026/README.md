@@ -1,6 +1,6 @@
 # Agentic Threat Hunting: Building AI That Remembers What You Hunted
 
-Workshop materials from the DEF CON 4-hour workshop on agentic threat hunting.
+Workshop materials from the DEF CON 4-hour workshop on agentic threat hunting (August 2026). For the current 150-minute version, see the [repo root](../README.md).
 
 ## What's Here
 
@@ -41,4 +41,4 @@ Queries assume the workshop dataset in `index=thrunt`, with process telemetry in
 
 ## License
 
-See [LICENSE](LICENSE).
+See [LICENSE](../LICENSE).

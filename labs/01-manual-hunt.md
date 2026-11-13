@@ -5,14 +5,29 @@
 
 ## Setup (5 min)
 
-**1. Log in to Splunk.** Open `<SPLUNK_URL>` in your browser. Your login is on your
-row in the shared credentials sheet. Go to **Search & Reporting**. All the data lives in `index=thrunt`.
+**1. Install ATHF.** In a terminal, run this block. It throws away any old venv so
+everyone is on the same build:
 
-**2. Set the time picker to Last 30 days.** The time picker is the drop-down to the right
+```bash
+deactivate 2>/dev/null
+rm -rf .venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install 'agentic-threat-hunting-framework[all]'
+athf --version
+```
+
+You want a version number back from the last line. No version? Flag one of us. No LLM
+key needed today.
+
+**2. Log in to Splunk.** Open the [credentials sheet](https://docs.google.com/spreadsheets/d/1xDZbHArGZHN1QscB1jALOHR3JeTuHU9S7_z0o9AZMzE/edit?usp=sharing), type your name in one free row (one person per row), and open that row's **Splunk URL** in your browser. Log in with that row's username and password, then go to **Search & Reporting**. All the data lives in `index=thrunt`.
+
+**3. Set the time picker to Last 30 days.** The time picker is the drop-down to the right
 of the search bar. The attack happened over the past week, so "Last 24 hours" misses
 most of it — and "Last 7 days" cuts off the very start.
 
-**3. Set up your ATHF workspace.** In a terminal:
+**4. Set up your ATHF workspace.** In the same terminal:
 
 ```bash
 athf init
@@ -29,8 +44,8 @@ athf hunt list
 
 Three seeded example hunts (H-0001–H-0003) is expected. Leave them.
 
-**If `athf` isn't found,** rerun the install check from the kickoff: activate the
-`.venv`, then `athf --version`.
+**If `athf` isn't found,** activate the venv from step 1 (`source .venv/bin/activate`),
+then `athf --version`.
 
 ## Part A — Follow the process tree (12 min)
 
@@ -158,6 +173,9 @@ athf hunt new \
 workspace, after the three examples) and prints the path:
 `hunts/production/2026/Q4/H-0004.md`. Open that file in your editor. The **ABLE
 Scoping** table under LEARN is already filled from your flags.
+
+> **Tip (macOS):** `open -t hunts/production/2026/Q4/H-0004.md` pops the file straight
+> into your text editor from the terminal.
 
 > **If you're ahead:** ATHF's template puts the *Hypothesis Statement* under **LEARN**,
 > and calls **OBSERVE** *Expected Behaviors*. Type the hypothesis: *CRON GOBLIN uses a
@@ -313,7 +331,8 @@ athf hunt new \
   --non-interactive
 ```
 
-**2. Open the file:** `hunts/production/2026/Q4/H-0005.md`, next to H-0004.
+**2. Open the file:** `hunts/production/2026/Q4/H-0005.md`, next to H-0004
+(macOS: `open -t hunts/production/2026/Q4/H-0005.md`).
 
 **3. Paste CHECK.** Same two placeholders as H-0004.
 

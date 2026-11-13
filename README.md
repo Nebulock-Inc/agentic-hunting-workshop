@@ -35,8 +35,10 @@ and event in the dataset. Nothing here describes a real intrusion or a real cust
 3. **Run the preflight check:** `python3 preflight/validate.py` (see [`preflight/`](preflight/README.md)).
    A warning about a missing LLM key is fine.
 4. **Bring a laptop and a web browser.** No LLM API key needed: the AI modules run on the
-   presenter's screen. Your Splunk login comes from the shared credentials sheet you'll be
-   given in the room.
+   presenter's screen.
+5. **Splunk login:** pick a row in the
+   [credentials sheet](https://docs.google.com/spreadsheets/d/1xDZbHArGZHN1QscB1jALOHR3JeTuHU9S7_z0o9AZMzE/edit?usp=sharing)
+   and put your name on it, one person per row.
 
 You should be comfortable reading basic Splunk SPL. No prior AI or agent experience needed.
 
@@ -44,8 +46,8 @@ You should be comfortable reading basic Splunk SPL. No prior AI or agent experie
 
 | Part | Minutes | Format |
 |------|---------|--------|
-| Kickoff | 15 | Scenario, the alert, install check |
-| Module 1 — Manual hunt | 30 | Hands-on: hunt by hand in Splunk, write it down (L0 → L1) |
+| Kickoff | 15 | ATHF, the scenario, the alert |
+| Module 1 — Manual hunt | 30 | Hands-on: install ATHF, hunt by hand in Splunk, write it down (L0 → L1) |
 | Module 2 — Search your history | 15 | Hands-on: find the next hunt from the last one (L2) |
 | Module 3 — Research agent | 35 | Demo: an AI agent researches the open lead (L3) |
 | Module 4 — Assistant runs the hunt | 40 | Demo: the assistant reads your hunts and runs the next one (L4) |
@@ -60,10 +62,9 @@ You leave with three documented hunts in your own ATHF workspace.
 | `PRE_READ.md` | Ten-minute read before class |
 | `labs/` | Lab handouts, one per module — [start here](labs/README.md) |
 | `preflight/` | Laptop readiness check |
-| `defcon-2026/` | The earlier 4-hour, five-module version of this workshop (DEF CON, August 2026). Same scenario, answers included: save it for after class |
 
-Answer keys and the slide decks are posted here after the class. Don't look for
-them beforehand: the fun is in finding it yourself.
+The answer keys (`labs/*-answer-key.*`) are included for anyone who wants to
+check their work. The slide decks are posted here after the class.
 
 ## Who Built This
 

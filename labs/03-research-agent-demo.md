@@ -43,6 +43,10 @@ steps: how does this normally work, how do attackers abuse it, which log fields 
 have we hunted it before, then a summary. The topic reuses H-0005's words on purpose: step
 four searches your hunts, and it only finds H-0005 if the words match.
 
+**Following along?** Read `research/R-0001.md` in your repo. To run research yourself
+later, `athf research new` needs an Anthropic or OpenAI API key, AWS Bedrock credentials,
+or a local Ollama. A Claude subscription alone won't work.
+
 **Show:** open `research/R-0001.md` in the editor. Read four lines:
 
 1. **Related Work:** `H-0005`. It read *your* hunt.

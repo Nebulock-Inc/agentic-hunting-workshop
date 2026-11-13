@@ -110,7 +110,8 @@ athf hunt new \
 ```
 
 **Open the file.** In a workspace with H-0004 and H-0005 this is **H-0006**. The command
-prints the path, `hunts/production/2026/Q4/H-0006.md`. Open it in your editor. LEARN is
+prints the path, `hunts/production/2026/Q4/H-0006.md`. Open it in your editor
+(macOS: `open -t hunts/production/2026/Q4/H-0006.md`). LEARN is
 already filled from the command.
 
 **Change the status, then paste CHECK and KEEP.**
@@ -174,9 +175,9 @@ needs something from outside the logs. All you have is logs.
 ## Stop here — you should see
 
 ```bash
-athf hunt list               # H-0004, H-0005, H-0006, plus the 3 examples
-athf hunt validate           # every hunt passes
-athf similar --hunt H-0004   # now finds H-0006
+athf hunt list  # H-0004, H-0005, H-0006, plus the 3 examples
+athf hunt validate  # every hunt passes
+athf similar --hunt H-0004  # now finds H-0006
 ```
 
 Fell behind? Copy the `athf hunt new` command above, then the paste blocks, and you're
